@@ -1,13 +1,13 @@
 # Fantasy Land Specification
+# Especificaciones de Fantasy Land
 
 [![Build Status](https://travis-ci.org/fantasyland/fantasy-land.svg?branch=master)](https://travis-ci.org/fantasyland/fantasy-land) [![Join the chat at https://gitter.im/fantasyland/fantasy-land](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fantasyland/fantasy-land?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-(aka "Algebraic JavaScript Specification")
+(aka "Especificaciones Algebraicas de JavaScript")
 
 <img src="logo.png" width="200" height="200" />
 
-This project specifies interoperability of common algebraic
-structures:
+Este proyecto especifica la interoperabilidad de estructuras algebraicas comunes:
 
 * [Setoid](#setoid)
 * [Semigroup](#semigroup)
@@ -32,24 +32,20 @@ structures:
 
 ## General
 
-An algebra is a set of values, a set of operators that it is closed
-under and some laws it must obey.
+Un albegra es un conjunto de valores, un conjunto de operaciones que se cierra bajo algunas leyes que debe obedecer.
 
-Each Fantasy Land algebra is a separate specification. An algebra may
-have dependencies on other algebras which must be implemented.
+Cada algebra de Fantasy Land es una especificacion separada. Un álgebra puede tener dependencias de otras álgebras que deben ser implementadas.
 
-## Terminology
+## Terminología
 
-1. "value" is any JavaScript value, including any which have the
-   structures defined below.
-2. "equivalent" is an appropriate definition of equivalence for the given value.
-    The definition should ensure that the two values can be safely swapped out in a program that respects abstractions. For example:
-    - Two lists are equivalent if they are equivalent at all indices.
-    - Two plain old JavaScript objects, interpreted as dictionaries, are equivalent when they are equivalent for all keys.
-    - Two promises are equivalent when they yield equivalent values.
-    - Two functions are equivalent if they yield equivalent outputs for equivalent inputs.
+1. "valor" es cualquier valor en JavaScript, incluyendo cualquiera que tenga las estructuras definidas a continuación.
+2. "equivalente" es una definición apropiada de equivalencia para el valor dado. La definición debe garantizar que los dos valores se puedan intercambiar de forma segura en un programa que respete las abstracciones. Por Ejemplo: 
+    - Dos listas son equivalentes si son equivalentes en todos sus indices.
+    - Dos objetos planos de Javascript, interpretados como diccionarios, son equivalentes cuando son equivalentes para todas las claves.
+    - Dos promesas son equivalentes cuando producen valores equivalentes.
+    - Dos funciones son equivalentes si producen resultados equivalentes para entradas equivalentes
 
-## Prefixed method names
+## Nombres de métodos prefijados.
 
 In order for a data type to be compatible with Fantasy Land, its values must
 have certain properties. These properties are all prefixed by `fantasy-land/`.
