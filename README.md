@@ -1,4 +1,3 @@
-# Fantasy Land Specification
 # Especificaciones de Fantasy Land
 
 [![Build Status](https://travis-ci.org/fantasyland/fantasy-land.svg?branch=master)](https://travis-ci.org/fantasyland/fantasy-land) [![Join the chat at https://gitter.im/fantasyland/fantasy-land](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fantasyland/fantasy-land?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -32,7 +31,7 @@ Este proyecto especifica la interoperabilidad de estructuras algebraicas comunes
 
 ## General
 
-Un albegra es un conjunto de valores, un conjunto de operaciones que se cierra bajo algunas leyes que debe obedecer.
+Un albegra es un conjunto de valores, un conjunto de operaciones que se cierran bajo algunas leyes que debe obedecer.
 
 Cada algebra de Fantasy Land es una especificacion separada. Un álgebra puede tener dependencias de otras álgebras que deben ser implementadas.
 
@@ -47,18 +46,16 @@ Cada algebra de Fantasy Land es una especificacion separada. Un álgebra puede t
 
 ## Nombres de métodos prefijados.
 
-In order for a data type to be compatible with Fantasy Land, its values must
-have certain properties. These properties are all prefixed by `fantasy-land/`.
-For example:
+Para que un tipo de dato sea compatible con Fantasy Land, sus valores deben tener ciertas propiedades. Estas propiedades estan todas prefijadas por `fantasy-land/`. Por ejemplo:
 
 ```js
 //  MyType#fantasy-land/map :: MyType a ~> (a -> b) -> MyType b
 MyType.prototype['fantasy-land/map'] = ...
 ```
 
-Further in this document unprefixed names are used just to reduce noise.
+Ademas, en este documento, los nombres sin prefijos se utilizan solo para reducir el ruido.
 
-For convenience you can use `fantasy-land` package:
+Para mayor comodidad, puede utilizar el paquete: `fantasy-land`
 
 ```js
 var fl = require('fantasy-land')
